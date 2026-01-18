@@ -5,17 +5,18 @@
 
 version: 2
 
-multi-ecosystem-groups:
-  infrastructure:
-    schedule:
-      interval: "weekly"
-
 updates:
   - package-ecosystem: "cargo"
     directory: "/"
-
+    schedule:
+      interval: "weekly"
+  
   - package-ecosystem: "rust-toolchain"
     directory: "/"
+    schedule:
+      interval: "weekly"
 
   - package-ecosystem: "github-actions"
     directory: "/"
+    schedule:
+      interval: "weekly"
