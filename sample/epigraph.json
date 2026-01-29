@@ -3,54 +3,6 @@
   "project_name": "epigraph",
   "vocabulary": [
     {
-      "word": "12",
-      "meaning": "12"
-    },
-    {
-      "word": "1404",
-      "meaning": "1404"
-    },
-    {
-      "word": "198",
-      "meaning": "198"
-    },
-    {
-      "word": "1󰀗",
-      "meaning": "first"
-    },
-    {
-      "word": "2657",
-      "meaning": "2657"
-    },
-    {
-      "word": "267",
-      "meaning": "267"
-    },
-    {
-      "word": "3154",
-      "meaning": "3154"
-    },
-    {
-      "word": "4",
-      "meaning": "4"
-    },
-    {
-      "word": "5811",
-      "meaning": "5811"
-    },
-    {
-      "word": "597",
-      "meaning": "597"
-    },
-    {
-      "word": "7",
-      "meaning": "7"
-    },
-    {
-      "word": "807",
-      "meaning": "807"
-    },
-    {
       "word": "󰀇󰀖󰀳󰀬",
       "meaning": "Bakuzhati"
     },
@@ -265,262 +217,310 @@
     {
       "word": "󰀶󰀲",
       "meaning": "stone"
+    },
+    {
+      "word": "󰀸󰀗",
+      "meaning": "first"
+    },
+    {
+      "word": "󰀸󰀹",
+      "meaning": "12"
+    },
+    {
+      "word": "󰀸󰀻󰀷󰀻",
+      "meaning": "1404"
+    },
+    {
+      "word": "󰀸󰁀󰀿",
+      "meaning": "198"
+    },
+    {
+      "word": "󰀹󰀽󰀼󰀾",
+      "meaning": "2657"
+    },
+    {
+      "word": "󰀹󰀽󰀾",
+      "meaning": "267"
+    },
+    {
+      "word": "󰀺󰀸󰀼󰀻",
+      "meaning": "3154"
+    },
+    {
+      "word": "󰀻",
+      "meaning": "4"
+    },
+    {
+      "word": "󰀼󰀿󰀸󰀸",
+      "meaning": "5811"
+    },
+    {
+      "word": "󰀼󰁀󰀾",
+      "meaning": "597"
+    },
+    {
+      "word": "󰀾",
+      "meaning": "7"
+    },
+    {
+      "word": "󰀿󰀷󰀾",
+      "meaning": "807"
     }
   ],
   "sentences": [
     {
       "words": [
-        0,
+        55,
+        4,
+        42,
+        27,
+        64,
         16,
-        54,
-        39,
-        10,
-        28,
-        58,
-        56,
-        57,
-        54,
-        60,
-        7,
-        24
+        46,
+        44,
+        45,
+        42,
+        48,
+        61,
+        12
       ],
       "meaning": "12 Gods All Above Created 7 Planets And Occupied All With Four Tribes."
     },
     {
       "words": [
-        16,
-        57,
-        49,
-        13,
-        40,
-        34
+        4,
+        45,
+        37,
+        1,
+        28,
+        22
       ],
       "meaning": "Gods Taught Men The Gift Of Great Language."
     },
     {
       "words": [
-        3,
-        16,
-        63,
-        45,
-        13,
-        57,
-        42,
-        42,
-        58,
-        53,
         54,
-        24,
-        49,
-        35,
-        34
+        4,
+        51,
+        33,
+        1,
+        45,
+        30,
+        30,
+        46,
+        41,
+        42,
+        12,
+        37,
+        23,
+        22
       ],
       "meaning": "The First God Feared The Offering. The Gift Creates Men Very Powerful From All The Other Languages The Tribes Taught."
     },
     {
       "words": [
-        24,
-        15,
-        60,
-        16,
-        41,
-        56,
-        54,
-        35,
-        24,
-        59
+        12,
+        3,
+        48,
+        4,
+        29,
+        44,
+        42,
+        23,
+        12,
+        47
       ],
       "meaning": "Tribes Not Speak With Gods And All Other Tribes Fight"
     },
     {
       "words": [
+        21,
+        50,
+        19,
+        49,
+        23,
+        13,
+        35,
+        38,
         33,
-        62,
-        31,
-        61,
-        35,
-        25,
-        47,
-        50,
-        45,
-        50,
-        64,
-        55,
-        61,
-        35,
-        24,
-        44,
-        25,
-        15,
-        40,
-        31,
-        43,
+        38,
         52,
-        34,
-        41,
-        56,
-        16,
-        17
+        43,
+        49,
+        23,
+        12,
+        32,
+        13,
+        3,
+        28,
+        19,
+        31,
+        40,
+        22,
+        29,
+        44,
+        4,
+        5
       ],
       "meaning": "Nari: By Others Our Work Must Continue. We Fear We Will Conquered By Other Tribe. This Must Not Stop Great Work. Speak Old Language And Contact Gods."
     },
     {
       "words": [
-        40,
-        38,
-        12,
-        14,
-        22,
-        29
+        28,
+        26,
+        0,
+        2,
+        10,
+        17
       ],
       "meaning": "Great King Bakuzhati Child Of Makudovu"
     },
     {
       "words": [
-        30,
-        22,
-        33
+        18,
+        10,
+        21
       ],
       "meaning": "Next Of Nari"
     },
     {
       "words": [
-        57,
-        16,
-        41
+        45,
+        4,
+        29
       ],
       "meaning": "Man Speak Gods (Speaker To The Gods)"
     },
     {
       "words": [
-        38,
-        22,
-        38
+        26,
+        10,
+        26
       ],
       "meaning": "King Of Kings"
     },
     {
       "words": [
-        46,
-        57,
-        38,
-        49,
-        54,
-        24,
-        34
+        34,
+        45,
+        26,
+        37,
+        42,
+        12,
+        22
       ],
       "meaning": "Wise Men Taught King All Tribes Languages"
     },
     {
       "words": [
-        34,
         22,
-        16,
-        58,
-        20
+        10,
+        4,
+        46,
+        8
       ],
       "meaning": "Created New Language of Gods"
     },
     {
       "words": [
-        40,
-        32,
-        22,
-        36,
-        58,
-        23,
-        16,
-        41
+        28,
+        20,
+        10,
+        24,
+        46,
+        11,
+        4,
+        29
       ],
       "meaning": "Created Great Temple Of Pagomaru For Speaking To Gods"
     },
     {
       "words": [
-        35,
-        24,
-        48,
-        18,
-        59,
-        40,
-        26,
-        27
+        23,
+        12,
+        36,
+        6,
+        47,
+        28,
+        14,
+        15
       ],
       "meaning": "Other Tribe Shori Prepared To Fight. Hide The Great Diamond"
     },
     {
       "words": [
-        6,
+        60,
+        32,
+        58,
         44,
-        4,
-        56,
-        8,
-        37
+        62,
+        25
       ],
-      "meaning": ""
+      "meaning": "3154 + 2657 = 5811"
     },
     {
       "words": [
-        9,
-        44,
-        11,
-        56,
-        1,
-        37
-      ],
-      "meaning": ""
-    },
-    {
-      "words": [
-        51,
-        23,
-        44,
+        63,
+        32,
         65,
-        41
+        44,
+        56,
+        25
+      ],
+      "meaning": "597 + 807 = 1404"
+    },
+    {
+      "words": [
+        39,
+        11,
+        32,
+        53,
+        29
       ],
       "meaning": "Shurabi Spoke For This Stone"
     },
     {
       "words": [
-        20,
-        33,
-        52,
-        33,
-        28,
-        57,
-        14,
-        19,
+        8,
         21,
-        26
-      ],
-      "meaning": ""
-    },
-    {
-      "words": [
+        40,
+        21,
         16,
-        19
+        45,
+        2,
+        7,
+        9,
+        14
       ],
       "meaning": ""
     },
     {
       "words": [
-        52,
-        52,
-        16
+        4,
+        7
       ],
       "meaning": ""
     },
     {
       "words": [
-        5,
-        2
+        40,
+        40,
+        4
       ],
       "meaning": ""
     },
     {
       "words": [
-        30,
-        46,
+        59,
         57
+      ],
+      "meaning": ""
+    },
+    {
+      "words": [
+        18,
+        34,
+        45
       ],
       "meaning": ""
     }
