@@ -1,8 +1,6 @@
 //! TF-IDF-based similar segment search using cosine similarity.
 
-use std::sync::Arc;
-
-use tf_idf_vectorizer::{Corpus, Query, SimilarityAlgorithm, TFIDFVectorizer, TermFrequency};
+use scirs2_text::{cosine_similarity, TfidfVectorizer, Vectorizer, WhitespaceTokenizer};
 
 use super::state::DecryptionApp;
 
@@ -15,49 +13,59 @@ impl DecryptionApp {
             return;
         }
 
-        let target_seg = match self.project.segments.get(target_idx) {
-            Some(s) => s,
-            None => return,
+        // Collect all documents as joined token strings
+        let documents: Vec<String> = self
+            .project
+            .segments
+            .iter()
+            .map(|seg| {
+                seg.tokens
+                    .iter()
+                    .map(|t| t.original.as_str())
+                    .collect::<Vec<_>>()
+                    .join(" ")
+            })
+            .collect();
+
+        // Create vectorizer with whitespace tokenizer to preserve pre-tokenized words
+        // This is important for handling special Unicode characters correctly
+        let tokenizer = Box::new(WhitespaceTokenizer::new());
+        let mut vectorizer =
+            TfidfVectorizer::with_tokenizer(tokenizer, false, true, Some("l2".to_string()));
+
+        // Fit and transform documents
+        let doc_refs: Vec<&str> = documents.iter().map(|s| s.as_str()).collect();
+        let matrix = match vectorizer.fit_transform(&doc_refs) {
+            Ok(m) => m,
+            Err(_) => return,
         };
 
-        let target_terms: Vec<&str> = target_seg
-            .tokens
-            .iter()
-            .map(|t| t.original.as_str())
-            .collect();
+        // Get target document vector
+        let target_vector = match matrix.row(target_idx).into_owned() {
+            vec => vec,
+        };
 
-        if target_terms.is_empty() {
-            return;
-        }
-
-        let corpus = Arc::new(Corpus::new());
-        let mut vectorizer: TFIDFVectorizer<f32, usize> = TFIDFVectorizer::new(corpus);
-
-        for (idx, seg) in self.project.segments.iter().enumerate() {
-            let terms: Vec<&str> = seg.tokens.iter().map(|t| t.original.as_str()).collect();
-            if terms.is_empty() {
+        // Compute similarities with all other documents
+        let mut scores: Vec<(usize, f64)> = Vec::new();
+        for (idx, _) in self.project.segments.iter().enumerate() {
+            if idx == target_idx {
                 continue;
             }
-            let mut freq = TermFrequency::new();
-            freq.add_terms(&terms);
-            vectorizer.add_doc(idx, &freq);
+
+            let doc_vector = matrix.row(idx);
+            match cosine_similarity(target_vector.view(), doc_vector) {
+                Ok(sim) => {
+                    if sim > 0.0 {
+                        scores.push((idx, sim));
+                    }
+                }
+                Err(_) => continue,
+            }
         }
 
-        let mut target_freq = TermFrequency::new();
-        target_freq.add_terms(&target_terms);
-        let query = Query::from_freq_or(&target_freq);
-
-        let algorithm = SimilarityAlgorithm::CosineSimilarity;
-        let mut hits = vectorizer.search(&algorithm, query);
-        hits.sort_by_score_desc();
-
-        let scores: Vec<(usize, f64)> = hits
-            .list
-            .iter()
-            .filter(|e| e.key != target_idx)
-            .map(|e| (e.key, e.score))
-            .take(5)
-            .collect();
+        // Sort by similarity descending and take top 5
+        scores.sort_by(|a, b| b.1.partial_cmp(&a.1).unwrap_or(std::cmp::Ordering::Equal));
+        scores.truncate(5);
 
         self.similar_popup = Some((target_idx, scores));
     }
